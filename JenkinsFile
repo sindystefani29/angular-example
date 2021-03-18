@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+                steps {
+                sh "echo 'No  Build for node js'"
+            }
+        }
+           
+        stage('dockerized') {
+                steps{
+                    echo "Build Docker images"
+                    sh "docker build -t angular ."
+                
+                }
+    
+        }
+
+        stage('Deploy To Docker Registry') {
+                steps {
+                    echo "Docker Image Tag"
+                    sh "docker tag angular registry.heroku.com/frozen-brook-44582/web"
+                    sh "docker push registry.heroku.com/frozen-brook-4458/web"
+            }
+            
+
+        }   
+    }
+}
