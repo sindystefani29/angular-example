@@ -7,7 +7,7 @@ pipeline {
             }
         }
            
-        stage('dockerized') {
+        stage('dockerized app') {
             steps{
                 echo "Build Docker images"
                 bat "docker build -t angular ."
@@ -17,13 +17,11 @@ pipeline {
         }
 
         stage('Deploy To Docker Registry') {
-                steps {
-                    echo "Docker Image Tag"
-                    sh "docker tag angular registry.heroku.com/frozen-brook-44582/web"
-                    sh "docker push registry.heroku.com/frozen-brook-4458/web"
+            steps {
+                echo "Docker Image Tag"
+                bat "docker tag angular registry.heroku.com/frozen-brook-44582/web"
+                bat "docker push registry.heroku.com/frozen-brook-4458/web"
             }
-            
-
-        }   
+        }    
     }
 }
