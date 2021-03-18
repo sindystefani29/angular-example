@@ -11,4 +11,14 @@
         <label for="phone">Phone Number</label>
         <input type="text" id="phone" name="phone" class="form-control">
     </div>
+    <div>
+        <label></label>
+        <select>
+            <option *ngFor="let course of arr">{{course}}</option>
+        </select>
+    </div>
 </form>
+<div>
+    <p>{{text}}</p>
+    <button (click) = "text='keganti'">coba ganti</button>
+</div>
