@@ -1,2 +1,3 @@
-<p>heroes works! {{propsExample}}</p>
-<app-heroes-child></app-heroes-child>
+<p>heroes works! {{propsExample}} {{masterName}}</p>
+<input disabled [(ngModel)] = "emitHere" />
+<app-heroes-child [cobaProps] = "data" (newItemEvent)="addItem($event)"></app-heroes-child>

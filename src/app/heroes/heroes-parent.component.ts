@@ -9,7 +9,14 @@ import { HeroesDirective } from './heroes.directive';
 })
 export class HeroesComponent extends HeroesDirective {
   @Input() propsExample: string;
-  constructor(public logger: FormService) {
-    super(logger);
+  @Input('master') masterName: string;
+  data: string[];
+  emitHere: string
+  constructor(public service: FormService) {
+    super(service);
+    this.data = service.getCourseArr()
+  }
+  addItem(val){
+    this.emitHere = val
   }
 }

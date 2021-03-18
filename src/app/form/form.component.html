@@ -1,7 +1,8 @@
 <form>
     <div class="form-group">
         <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" class="form-control">
+        <input type="text" id="firstName" [(ngModel)] = "model.name.first" name="firstName" class="form-control">
+        {{model.name.first}}
     </div>
     <div class="form-group">
         <label for="lastName">Last Name</label>

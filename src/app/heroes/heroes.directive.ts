@@ -8,6 +8,8 @@ export class HeroesDirective implements OnInit {
   constructor(public logger: FormService) { }
 
   // implement OnInit's `ngOnInit` method
+  // onchange disini untuk perubahan props 
+  // seperti componentReceiveProps / componentDidUpdate
   ngOnChanges(changes: SimpleChanges): void {
     try{
         console.log(changes)
