@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
                 steps {
-                sh "echo 'No  Build for node js'"
+                echo "No  Build for node js"
             }
         }
            
