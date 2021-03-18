@@ -7,13 +7,15 @@ import { FormService } from './form.service';
 import { FormComponent } from './form/form.component';
 import { HeroesChildComponent } from './heroes/heroes-child.component';
 import { HeroesComponent } from './heroes/heroes-parent.component';
+import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     HeroesComponent,
-    HeroesChildComponent
+    HeroesChildComponent,
+    PipeExampleComponent
   ],
   imports: [
     BrowserModule,

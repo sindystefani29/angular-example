@@ -1,3 +1,9 @@
 <p>heroes works! {{propsExample}} {{masterName}}</p>
 <input disabled [(ngModel)] = "emitHere" />
 <app-heroes-child [cobaProps] = "data" (newItemEvent)="addItem($event)"></app-heroes-child>
+<button [attr.aria-label]="actionName">Aria Label attribute binding</button>
+<p [class] = "redColor">This is red color</p>
+<p [class.pink] = "isPink" [class.blue] = "!isPink">This is {{color}} color</p>
+<p [class] = "color">This is {{color}} color</p>
+<button (click) = "setColor(isPink)">change color</button>
+<button (click) = "getEvent($event)">getEvent</button>
