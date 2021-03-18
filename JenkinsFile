@@ -2,17 +2,17 @@ pipeline {
     agent any
     stages {
         stage('build') {
-                steps {
+            steps {
                 echo "No  Build for node js"
             }
         }
            
         stage('dockerized') {
-                steps{
-                    echo "Build Docker images"
-                    sh "docker build -t angular ."
+            steps{
+                echo "Build Docker images"
+                bat "docker build -t angular ."
                 
-                }
+            }
     
         }
 
