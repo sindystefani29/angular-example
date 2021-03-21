@@ -5,5 +5,7 @@
 <p [class] = "redColor">This is red color</p>
 <p [class.pink] = "isPink" [class.blue] = "!isPink">This is {{color}} color</p>
 <p [class] = "color">This is {{color}} color</p>
+<p [ngClass] = "isPink ? 'pink' : 'blue'">This is NgClass color</p>
 <button (click) = "setColor(isPink)">change color</button>
 <button (click) = "getEvent($event)">getEvent</button>
+<p appHighlight color="pink">highlight me!</p>

@@ -8,6 +8,7 @@ import { FormComponent } from './form/form.component';
 import { HeroesChildComponent } from './heroes/heroes-child.component';
 import { HeroesComponent } from './heroes/heroes-parent.component';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PipeExampleComponent } from './pipe-example/pipe-example.component';
     FormComponent,
     HeroesComponent,
     HeroesChildComponent,
-    PipeExampleComponent
+    PipeExampleComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
