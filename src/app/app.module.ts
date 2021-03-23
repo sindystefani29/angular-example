@@ -23,7 +23,7 @@ import { HighlightDirective } from './highlight.directive';
     BrowserModule,
     FormsModule
   ],
-  providers: [FormService],
+  //providers: [FormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

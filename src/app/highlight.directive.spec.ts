@@ -2,7 +2,10 @@ import { HighlightDirective } from './highlight.directive';
 
 describe('HighlightDirective', () => {
   it('should create an instance', () => {
-    const directive = new HighlightDirective();
+    let el = {
+      nativeElement: document.createElement('div')
+    };
+    const directive = new HighlightDirective(el);
     expect(directive).toBeTruthy();
   });
 });

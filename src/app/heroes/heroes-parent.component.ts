@@ -5,7 +5,8 @@ import { HeroesDirective } from './heroes.directive';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
+  styleUrls: ['./heroes.component.css'],
+  providers: [FormService]
 })
 export class HeroesComponent extends HeroesDirective {
   @Input() propsExample: string;

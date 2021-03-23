@@ -6,7 +6,7 @@ import { Form } from './form';
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css'],
-  //providers: [FormService]
+  providers: [FormService]
 })
 export class FormComponent implements OnInit {
   arr: string[];
